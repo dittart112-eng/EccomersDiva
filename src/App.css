@@ -1,17 +1,355 @@
-.product-container {
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f7;
+  color: #1f2937;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.main-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px 40px 60px;
+}
+
+.hero-section {
+  position: relative;
+  min-height: 430px;
+  border-radius: 34px;
+  overflow: hidden;
+  background-image: linear-gradient(
+      rgba(40, 40, 48, 0.38),
+      rgba(40, 40, 48, 0.38)
+    ),
+    url("https://static.zara.net/assets/public/c634/e4e3/d29b4b2cbab8/2e1a0f20d92a/03046109084-p/03046109084-p.jpg?ts=1776772056732&w=1024");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 34px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  justify-content: center;
+}
+
+.hero-overlay {
+  text-align: center;
+  color: #ffffff;
+  max-width: 760px;
+  padding: 30px;
+}
+
+.hero-badge {
+  display: inline-block;
+  background-color: rgba(109, 15, 43, 0.9);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
+}
+
+.hero-overlay h1 {
+  margin: 0 0 16px;
+  font-size: 64px;
+  line-height: 1.05;
+  color: #ffffff;
+}
+
+.hero-overlay p {
+  margin: 0 0 24px;
+  font-size: 20px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.featured-categories {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 40px;
+}
+
+.category-card {
+  position: relative;
+  min-height: 520px;
+  border-radius: 24px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.category-card.men {
+  background-image: linear-gradient(
+      rgba(20, 20, 25, 0.2),
+      rgba(20, 20, 25, 0.35)
+    ),
+    url("https://static.zara.net/assets/public/fc42/1fa1/28064f3da587/bdf070e05d61/03332412420-p/03332412420-p.jpg?ts=1776853238954&w=1024");
+}
+
+.category-card.women {
+  background-image: linear-gradient(
+      rgba(20, 20, 25, 0.2),
+      rgba(20, 20, 25, 0.35)
+    ),
+    url("https://static.zara.net/assets/public/c0f8/05b0/994e45fdb6a5/e022f50455f9/00167058420-p/00167058420-p.jpg?ts=1776879433980&w=1024");
+}
+
+.category-card.shoes {
+  background-image: linear-gradient(
+      rgba(20, 20, 25, 0.25),
+      rgba(20, 20, 25, 0.45)
+    ),
+    url("https://static.zara.net/assets/public/d6f7/32bc/465c48e28653/df645cfbf77a/11637710105-a1/11637710105-a1.jpg?ts=1776697580490&w=1126");
+}
+
+.category-card.accessories {
+  background-image: linear-gradient(
+      rgba(20, 20, 25, 0.2),
+      rgba(20, 20, 25, 0.4)
+    ),
+    url("https://static.zara.net/assets/public/49ac/d4a1/75ec4cf5a9d4/79fe0d85cdca/03147001700-p/03147001700-p.jpg?ts=1776699493975&w=1024");
+}
+
+.category-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 26px;
+}
+
+.category-overlay h3 {
+  color: #fff;
+  font-size: 34px;
+  margin: 0;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.product-highlight {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 36px;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #e7eaf1;
+  border-radius: 28px;
+  padding: 34px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+  margin-bottom: 44px;
+}
+
+.product-image-box {
+  background-color: #f2f4f8;
+  border-radius: 22px;
+  padding: 20px;
 }
 
 .product-image {
-  width: 300px;
-  border-radius: 12px;
-  margin-bottom: 15px;
+  width: 100%;
+  max-height: 720px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.product-category {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #6d0f2b;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.product-info h2 {
+  margin: 0 0 18px;
+  font-size: 42px;
+  color: #111827;
+}
+
+.price-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #9ca3af;
+  font-size: 18px;
+}
+
+.current-price {
+  color: #6d0f2b;
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.product-description {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 28px;
 }
 
 .product-buttons {
   display: flex;
-  gap: 12px;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.favorite-btn {
+  width: 48px;
+  min-width: 48px;
+  padding: 0;
+  border-radius: 14px;
+}
+
+.action-message {
+  margin-top: 18px;
+  color: #6d0f2b;
+  font-weight: 600;
+}
+
+.products-section {
+  background-color: #ffffff;
+  border: 1px solid #e7eaf1;
+  border-radius: 28px;
+  padding: 34px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 38px;
+  color: #111827;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.product-card {
+  background-color: #f9fafb;
+  border-radius: 22px;
+  padding: 16px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 24px rgba(15, 23, 42, 0.09);
+}
+
+.product-card-image-box {
+  background-color: #eceff3;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.product-card-image-box img {
+  width: 100%;
+  height: 260px;
+  object-fit: contain;
+}
+
+.product-card-body h3 {
+  margin: 0 0 10px;
+  font-size: 19px;
+  color: #1f2937;
+  min-height: 48px;
+}
+
+.product-card-body p {
+  margin: 0 0 14px;
+  font-size: 24px;
+  font-weight: 800;
+  color: #6d0f2b;
+}
+
+.footer {
+  margin-top: 50px;
+  background-color: #eceff5;
+  text-align: center;
+  padding: 26px 20px;
+  color: #4b5563;
+}
+
+.footer h3 {
+  margin: 0 0 10px;
+  color: #6d0f2b;
+  font-size: 32px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 15px;
+}
+
+@media (max-width: 1200px) {
+  .featured-categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-highlight {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 20px 16px 40px;
+  }
+
+  .hero-overlay h1 {
+    font-size: 42px;
+  }
+
+  .hero-overlay p {
+    font-size: 17px;
+  }
+
+  .featured-categories,
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-card {
+    min-height: 300px;
+  }
+
+  .product-info h2 {
+    font-size: 32px;
+  }
+
+  .section-header h2 {
+    font-size: 30px;
+  }
 }

@@ -7,8 +7,8 @@ const Button = ({
   type = "button",
   variant = "primary",
   disabled = false,
-  icon: Icon, // componente de icono
-  iconPosition = "left", // "left" | "right"
+  icon: Icon,
+  iconPosition = "left",
   className = "",
 }) => {
   return (
@@ -24,9 +24,15 @@ const Button = ({
         </span>
       )}
 
-      <span>{children}</span>
+      {children && <span>{children}</span>}
 
       {iconPosition === "right" && Icon && (
+        <span className="btn-icon">
+          <Icon />
+        </span>
+      )}
+
+      {!children && Icon && (
         <span className="btn-icon">
           <Icon />
         </span>
