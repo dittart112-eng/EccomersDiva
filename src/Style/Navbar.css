@@ -1,0 +1,81 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f0e6;
+  padding: 18px 40px;
+  position: relative;
+  border-bottom: 1px solid #ddd2bf;
+  font-family: Arial, sans-serif;
+}
+
+.navbar-logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #5c4632;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  position: relative;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #5c4632;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 10px 14px;
+}
+
+.menu-button:hover {
+  color: #7a5c43;
+}
+
+.mega-menu-container {
+  position: relative;
+}
+
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 850px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  background-color: #fffaf3;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  border: 1px solid #e5d8c3;
+  z-index: 1000;
+}
+
+.mega-column h3 {
+  margin-bottom: 14px;
+  font-size: 18px;
+  color: #4f3d2d;
+}
+
+.mega-column a {
+  display: block;
+  text-decoration: none;
+  color: #6b5744;
+  margin-bottom: 10px;
+  font-size: 15px;
+  transition: color 0.2s ease;
+}
+
+.mega-column a:hover {
+  color: #b07d4f;
+}
